@@ -13,20 +13,18 @@ function addButtonHandler() {
 }
 
 delButton.addEventListener("click", () => {
-  document.querySelectorAll(".box").forEach((event) => event.remove());
   input.value = "";
 });
 
 function createBoxes(number) {
   
-  for (var divs = [], i = 0, size = 30; i < number; i++, size += 10) {
+  for (var divs = [], i = 0, size = 30; i < number; i+=1, size += 10) {
     const div = document.createElement("div");
     div.style.backgroundColor = getRandomHexColor();
     div.classList.add("box");
     div.style.height = `${size}px`;
     div.style.width = `${size}px`;
     divs.push(div);
-    console.log(div);
   }
   divElts.append(...divs);
 }

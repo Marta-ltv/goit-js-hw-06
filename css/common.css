@@ -26,5 +26,6 @@ button {
 .js-gallery__items {
   display: flex;
   list-style: none;
+  flex-direction: column;
   
 }
